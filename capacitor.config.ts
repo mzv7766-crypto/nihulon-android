@@ -1,7 +1,7 @@
 import 'dotenv/config';
 import type { CapacitorConfig } from '@capacitor/cli';
 
-const appUrl = process.env.NIHULON_APP_URL || 'https://REPLACE-ME.base44.app';
+const appUrl = process.env.NIHULON_APP_URL || 'https://neolon.base44.app';
 
 const config: CapacitorConfig = {
   appId: 'com.nihulon.app',
@@ -10,7 +10,7 @@ const config: CapacitorConfig = {
   server: {
     url: appUrl,
     cleartext: false,
-    allowNavigation: ['*.base44.app']
+    allowNavigation: ['neolon.base44.app', '*.base44.app']
   },
   android: {
     allowMixedContent: false,
