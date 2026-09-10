@@ -1,3 +1,4 @@
+import 'dotenv/config';
 import type { CapacitorConfig } from '@capacitor/cli';
 
 const appUrl = process.env.NIHULON_APP_URL || 'https://REPLACE-ME.base44.app';
