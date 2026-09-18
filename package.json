@@ -1,17 +1,19 @@
 {
   "name": "nihulon-android",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": true,
   "type": "module",
   "scripts": {
-    "android:add": "cap add android",
-    "android:sync": "cap sync android",
+    "android:add": "cap add android && node scripts/patch-android-splash.mjs",
+    "android:sync": "cap sync android && node scripts/patch-android-splash.mjs",
+    "android:patch-splash": "node scripts/patch-android-splash.mjs",
     "android:open": "cap open android",
-    "android:run": "cap run android"
+    "android:run": "npm run android:sync && cap run android"
   },
   "dependencies": {
     "@capacitor/android": "^7.4.3",
     "@capacitor/core": "^7.4.3",
+    "@capacitor/splash-screen": "^7.0.3",
     "dotenv": "^16.6.1"
   },
   "devDependencies": {
