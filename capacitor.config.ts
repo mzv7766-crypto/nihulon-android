@@ -14,7 +14,22 @@ const config: CapacitorConfig = {
   },
   android: {
     allowMixedContent: false,
-    backgroundColor: '#111827'
+    // Keep the native WebView white while the remote app is loading.
+    backgroundColor: '#FFFFFF'
+  },
+  plugins: {
+    SplashScreen: {
+      // The Android launch screen itself must be white.
+      backgroundColor: '#FFFFFF',
+      launchShowDuration: 900,
+      launchAutoHide: true,
+      launchFadeOutDuration: 180,
+      androidSplashResourceName: 'splash',
+      androidScaleType: 'CENTER',
+      showSpinner: false,
+      splashFullScreen: false,
+      splashImmersive: false
+    }
   }
 };
 
